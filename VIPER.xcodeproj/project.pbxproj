@@ -14,6 +14,12 @@
 		820430072579DEEB00628BAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820430052579DEEB00628BAB /* Main.storyboard */; };
 		820430092579DEEC00628BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820430082579DEEC00628BAB /* Assets.xcassets */; };
 		8204300C2579DEEC00628BAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8204300A2579DEEC00628BAB /* LaunchScreen.storyboard */; };
+		82494A32257DDBE00037142F /* EmptyScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82494A31257DDBE00037142F /* EmptyScreenProtocols.swift */; };
+		82494A35257DDBEA0037142F /* EmptyScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82494A34257DDBEA0037142F /* EmptyScreenRouter.swift */; };
+		82494A38257DDBEF0037142F /* EmptyScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82494A37257DDBEF0037142F /* EmptyScreenInteractor.swift */; };
+		82494A3B257DDBFC0037142F /* EmptyScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82494A3A257DDBFC0037142F /* EmptyScreenPresenter.swift */; };
+		82494A3E257DDC010037142F /* EmptyScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82494A3D257DDC010037142F /* EmptyScreenView.swift */; };
+		82494A42257DDF430037142F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 82494A41257DDF430037142F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		820430082579DEEC00628BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8204300B2579DEEC00628BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8204300D2579DEEC00628BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82494A31257DDBE00037142F /* EmptyScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyScreenProtocols.swift; sourceTree = "<group>"; };
+		82494A34257DDBEA0037142F /* EmptyScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyScreenRouter.swift; sourceTree = "<group>"; };
+		82494A37257DDBEF0037142F /* EmptyScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyScreenInteractor.swift; sourceTree = "<group>"; };
+		82494A3A257DDBFC0037142F /* EmptyScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyScreenPresenter.swift; sourceTree = "<group>"; };
+		82494A3D257DDC010037142F /* EmptyScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyScreenView.swift; sourceTree = "<group>"; };
+		82494A41257DDF430037142F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BEFCB381300438CC4C9E4966 /* Pods-VIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER.debug.xcconfig"; path = "Target Support Files/Pods-VIPER/Pods-VIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		DC40FE6B42B629EF9141FF64 /* Pods-VIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER.release.xcconfig"; path = "Target Support Files/Pods-VIPER/Pods-VIPER.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +65,7 @@
 		82042FF32579DEEB00628BAB = {
 			isa = PBXGroup;
 			children = (
+				82494A41257DDF430037142F /* README.md */,
 				82042FFE2579DEEB00628BAB /* VIPER */,
 				82042FFD2579DEEB00628BAB /* Products */,
 				88A37BCC1F2D0A1CDC424236 /* Pods */,
@@ -71,6 +84,7 @@
 		82042FFE2579DEEB00628BAB /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				82494A22257DDA6B0037142F /* screens */,
 				82042FFF2579DEEB00628BAB /* AppDelegate.swift */,
 				820430012579DEEB00628BAB /* SceneDelegate.swift */,
 				820430032579DEEB00628BAB /* ViewController.swift */,
@@ -80,6 +94,26 @@
 				8204300D2579DEEC00628BAB /* Info.plist */,
 			);
 			path = VIPER;
+			sourceTree = "<group>";
+		};
+		82494A22257DDA6B0037142F /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				82494A30257DDAE80037142F /* EmptyScreen */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		82494A30257DDAE80037142F /* EmptyScreen */ = {
+			isa = PBXGroup;
+			children = (
+				82494A31257DDBE00037142F /* EmptyScreenProtocols.swift */,
+				82494A34257DDBEA0037142F /* EmptyScreenRouter.swift */,
+				82494A37257DDBEF0037142F /* EmptyScreenInteractor.swift */,
+				82494A3A257DDBFC0037142F /* EmptyScreenPresenter.swift */,
+				82494A3D257DDC010037142F /* EmptyScreenView.swift */,
+			);
+			path = EmptyScreen;
 			sourceTree = "<group>";
 		};
 		88A37BCC1F2D0A1CDC424236 /* Pods */ = {
@@ -152,6 +186,7 @@
 			files = (
 				8204300C2579DEEC00628BAB /* LaunchScreen.storyboard in Resources */,
 				820430092579DEEC00628BAB /* Assets.xcassets in Resources */,
+				82494A42257DDF430037142F /* README.md in Resources */,
 				820430072579DEEB00628BAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,8 +241,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				820430042579DEEB00628BAB /* ViewController.swift in Sources */,
+				82494A3E257DDC010037142F /* EmptyScreenView.swift in Sources */,
+				82494A3B257DDBFC0037142F /* EmptyScreenPresenter.swift in Sources */,
+				82494A35257DDBEA0037142F /* EmptyScreenRouter.swift in Sources */,
+				82494A38257DDBEF0037142F /* EmptyScreenInteractor.swift in Sources */,
 				820430002579DEEB00628BAB /* AppDelegate.swift in Sources */,
 				820430022579DEEB00628BAB /* SceneDelegate.swift in Sources */,
+				82494A32257DDBE00037142F /* EmptyScreenProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
