@@ -10,11 +10,17 @@ import UIKit
 class ViewController: UIViewController {
   enum Example: Int, CaseIterable {
     case emptyScreen
+    case itemListScreen
+    case itemListScreenWithCustomCell
     
     var description: String {
       switch self {
         case .emptyScreen:
           return "빈 화면"
+        case .itemListScreen:
+          return "목록 화면(RxSwift)"
+        case .itemListScreenWithCustomCell:
+          return "목록 화면(RxSwift + custom cell)"
       }
     }
   }
@@ -61,6 +67,12 @@ extension ViewController: UITableViewDelegate {
     switch Example(rawValue: indexPath.row)! {
       case .emptyScreen:
         let screen = EmptyScreenRouter.createModule(params: EmptyScreenParams(), dismissHandler: nil)
+        navigationController?.pushViewController(screen, animated: true)
+      case .itemListScreen:
+        let screen = ItemListScreenRouter.createModule(params: ItemListScreenParams(kind: .defaultCell), dismissHandler: nil)
+        navigationController?.pushViewController(screen, animated: true)
+      case .itemListScreenWithCustomCell:
+        let screen = ItemListScreenRouter.createModule(params: ItemListScreenParams(kind: .customCell), dismissHandler: nil)
         navigationController?.pushViewController(screen, animated: true)
     }
   }

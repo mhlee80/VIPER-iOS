@@ -14,6 +14,12 @@
 		820430072579DEEB00628BAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820430052579DEEB00628BAB /* Main.storyboard */; };
 		820430092579DEEC00628BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820430082579DEEC00628BAB /* Assets.xcassets */; };
 		8204300C2579DEEC00628BAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8204300A2579DEEC00628BAB /* LaunchScreen.storyboard */; };
+		824199C9257F9697002E5BEF /* ItemListScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824199C8257F9697002E5BEF /* ItemListScreenProtocols.swift */; };
+		824199CD257F969E002E5BEF /* ItemListScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824199CC257F969E002E5BEF /* ItemListScreenRouter.swift */; };
+		824199D0257F96A4002E5BEF /* ItemListScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824199CF257F96A4002E5BEF /* ItemListScreenInteractor.swift */; };
+		824199D3257F96A9002E5BEF /* ItemListScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824199D2257F96A9002E5BEF /* ItemListScreenPresenter.swift */; };
+		824199D6257F96AF002E5BEF /* ItemListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824199D5257F96AF002E5BEF /* ItemListScreenView.swift */; };
+		824199D9257F9EA3002E5BEF /* ItemListScreenView+CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824199D8257F9EA3002E5BEF /* ItemListScreenView+CustomCell.swift */; };
 		82494A32257DDBE00037142F /* EmptyScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82494A31257DDBE00037142F /* EmptyScreenProtocols.swift */; };
 		82494A35257DDBEA0037142F /* EmptyScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82494A34257DDBEA0037142F /* EmptyScreenRouter.swift */; };
 		82494A38257DDBEF0037142F /* EmptyScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82494A37257DDBEF0037142F /* EmptyScreenInteractor.swift */; };
@@ -32,6 +38,12 @@
 		820430082579DEEC00628BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8204300B2579DEEC00628BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8204300D2579DEEC00628BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824199C8257F9697002E5BEF /* ItemListScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListScreenProtocols.swift; sourceTree = "<group>"; };
+		824199CC257F969E002E5BEF /* ItemListScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListScreenRouter.swift; sourceTree = "<group>"; };
+		824199CF257F96A4002E5BEF /* ItemListScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListScreenInteractor.swift; sourceTree = "<group>"; };
+		824199D2257F96A9002E5BEF /* ItemListScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListScreenPresenter.swift; sourceTree = "<group>"; };
+		824199D5257F96AF002E5BEF /* ItemListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListScreenView.swift; sourceTree = "<group>"; };
+		824199D8257F9EA3002E5BEF /* ItemListScreenView+CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemListScreenView+CustomCell.swift"; sourceTree = "<group>"; };
 		82494A31257DDBE00037142F /* EmptyScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyScreenProtocols.swift; sourceTree = "<group>"; };
 		82494A34257DDBEA0037142F /* EmptyScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyScreenRouter.swift; sourceTree = "<group>"; };
 		82494A37257DDBEF0037142F /* EmptyScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyScreenInteractor.swift; sourceTree = "<group>"; };
@@ -96,10 +108,24 @@
 			path = VIPER;
 			sourceTree = "<group>";
 		};
+		824199C7257F9646002E5BEF /* ItemListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				824199C8257F9697002E5BEF /* ItemListScreenProtocols.swift */,
+				824199CC257F969E002E5BEF /* ItemListScreenRouter.swift */,
+				824199CF257F96A4002E5BEF /* ItemListScreenInteractor.swift */,
+				824199D2257F96A9002E5BEF /* ItemListScreenPresenter.swift */,
+				824199D5257F96AF002E5BEF /* ItemListScreenView.swift */,
+				824199D8257F9EA3002E5BEF /* ItemListScreenView+CustomCell.swift */,
+			);
+			path = ItemListScreen;
+			sourceTree = "<group>";
+		};
 		82494A22257DDA6B0037142F /* screens */ = {
 			isa = PBXGroup;
 			children = (
 				82494A30257DDAE80037142F /* EmptyScreen */,
+				824199C7257F9646002E5BEF /* ItemListScreen */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -242,12 +268,18 @@
 			files = (
 				820430042579DEEB00628BAB /* ViewController.swift in Sources */,
 				82494A3E257DDC010037142F /* EmptyScreenView.swift in Sources */,
+				824199C9257F9697002E5BEF /* ItemListScreenProtocols.swift in Sources */,
+				824199D0257F96A4002E5BEF /* ItemListScreenInteractor.swift in Sources */,
 				82494A3B257DDBFC0037142F /* EmptyScreenPresenter.swift in Sources */,
 				82494A35257DDBEA0037142F /* EmptyScreenRouter.swift in Sources */,
+				824199CD257F969E002E5BEF /* ItemListScreenRouter.swift in Sources */,
+				824199D6257F96AF002E5BEF /* ItemListScreenView.swift in Sources */,
 				82494A38257DDBEF0037142F /* EmptyScreenInteractor.swift in Sources */,
 				820430002579DEEB00628BAB /* AppDelegate.swift in Sources */,
 				820430022579DEEB00628BAB /* SceneDelegate.swift in Sources */,
 				82494A32257DDBE00037142F /* EmptyScreenProtocols.swift in Sources */,
+				824199D9257F9EA3002E5BEF /* ItemListScreenView+CustomCell.swift in Sources */,
+				824199D3257F96A9002E5BEF /* ItemListScreenPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
