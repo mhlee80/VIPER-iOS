@@ -124,6 +124,7 @@
 		82494A22257DDA6B0037142F /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				8257785B258113BC008A65FA /* BidirectionalBindingScreen */,
 				82494A30257DDAE80037142F /* EmptyScreen */,
 				824199C7257F9646002E5BEF /* ItemListScreen */,
 			);
@@ -140,6 +141,13 @@
 				82494A3D257DDC010037142F /* EmptyScreenView.swift */,
 			);
 			path = EmptyScreen;
+			sourceTree = "<group>";
+		};
+		8257785B258113BC008A65FA /* BidirectionalBindingScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BidirectionalBindingScreen;
 			sourceTree = "<group>";
 		};
 		88A37BCC1F2D0A1CDC424236 /* Pods */ = {
