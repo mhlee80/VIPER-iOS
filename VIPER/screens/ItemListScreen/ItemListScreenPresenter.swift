@@ -23,12 +23,12 @@ class ItemListScreenPresenter: ItemListScreenPresenterProtocol {
   }
 
   func viewDidLoad() {
-//    switch router.params.kind {
-//      case .defaultCell:
-//        isDefaultTableHidden.accept(false)
-//      case .customCell:
-//        isCustomTableHidden.accept(false)
-//    }
-//    itemNames.accept(interactor.itemNames)
+    switch router.params.kind {
+      case .defaultCell:
+        isDefaultTableHidden.accept(false)
+      case .customCell:
+        isCustomTableHidden.accept(false)
+    }
+    itemNames.accept(interactor.itemNames)
   }
 }
