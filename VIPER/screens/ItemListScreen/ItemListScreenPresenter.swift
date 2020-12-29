@@ -12,6 +12,9 @@ class ItemListScreenPresenter: ItemListScreenPresenterProtocol {
   var interactor: ItemListScreenInteractorProtocol
   var router: ItemListScreenRouterProtocol
   
+  var alertHandler: AlertHandler!
+  var indicatorHandler: IndicatorHandler!
+  
   var isDefaultTableHidden: BehaviorRelay<Bool> = .init(value: true)
   var isCustomTableHidden: BehaviorRelay<Bool> = .init(value: true)
   

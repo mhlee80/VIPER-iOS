@@ -37,6 +37,9 @@ class ItemListScreenView: UIViewController, ItemListScreenViewProtocol {
   init(presenter: ItemListScreenPresenterProtocol) {
     self.presenter = presenter
     super.init(nibName: nil, bundle: nil)
+    
+    self.presenter.alertHandler = AlertHandler(vc: self)
+    self.presenter.indicatorHandler = IndicatorHandler(vc: self)
   }
   
   required init?(coder: NSCoder) {

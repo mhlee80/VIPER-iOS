@@ -38,6 +38,9 @@ protocol ItemListScreenPresenterProtocol {
   func viewWillDisappear()
   func viewDidDisappear()
   
+  var alertHandler: AlertHandler! { get set }
+  var indicatorHandler: IndicatorHandler! { get set }
+  
   var isDefaultTableHidden: BehaviorRelay<Bool> { get }
   var isCustomTableHidden: BehaviorRelay<Bool> { get }
   var itemNames: BehaviorRelay<[String]> { get }
