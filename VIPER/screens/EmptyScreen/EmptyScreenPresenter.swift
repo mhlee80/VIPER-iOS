@@ -11,7 +11,10 @@ import RxCocoa
 class EmptyScreenPresenter: EmptyScreenPresenterProtocol {  
   var interactor: EmptyScreenInteractorProtocol
   var router: EmptyScreenRouterProtocol
-      
+  
+  var alertHandler: AlertHandler!
+  var indicatorHandler: IndicatorHandler!
+  
   init(interactor: EmptyScreenInteractorProtocol, router: EmptyScreenRouterProtocol) {
     self.interactor = interactor
     self.router = router

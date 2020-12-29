@@ -31,6 +31,9 @@ protocol EmptyScreenPresenterProtocol {
   func viewDidAppear()
   func viewWillDisappear()
   func viewDidDisappear()
+  
+  var alertHandler: AlertHandler! { get set }
+  var indicatorHandler: IndicatorHandler! { get set }
 }
 
 protocol EmptyScreenInteractorProtocol {
